@@ -6,16 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chaeun</title>
 
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 
-    <script type="text/javascript" src="/index.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </head>
 <body>
-    <div class="container">
+    <div class="header">
         <header>
-            <h1>Chaeun</h1>
+            <h1>
+                <a onclick="GoToMain()">Chaeun</a>
+            </h1>
         </header>
+    </div>
+    <div class="main">
+        <img src="/profile.png" onclick="Meow()">
+        <p>Front-End Developer.</p>
     </div>
 
     <script type="text/javascript">
@@ -54,6 +61,27 @@
             lastScrollTop = st;
         }
     });
+
+    function GoToMain() {
+        location.href = "https://chaeun.ga";
+    }
+
+    function Meow() {
+        Toastify({
+            text: "Meow.",
+            duration: 3000,
+            newWindow: true,
+            close: false,
+            gravity: "top",
+            position: "center",
+            stopOnFocus: true,
+            style: {
+                background: "rgba(46, 170, 220, 0.2)",
+                color: "black",
+            },
+            onClick: function() {}
+        }).showToast();
+    }
     </script>
 </body>
 </html>
