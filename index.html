@@ -7,24 +7,19 @@
     <title>Chaeun</title>
 
     <link rel="stylesheet" type="text/css" href="/style.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </head>
 <body>
     <div class="header">
         <header>
             <h1>
-                <a onclick="GoToMain()">Chaeun</a>
+                <a onclick="GoToMain()">Chaeun to Afghanistan</a>
             </h1>
         </header>
     </div>
     <div class="main">
-        <img src="/profile.png" onclick="Meow()">
-        <p>Meow.</p>
-        <button onclick="GoToGithub()"><i class="bi bi-github"></i></button>
+        <button onclick="GoToDiscordBot()">디스코드 봇 추가</button>
     </div>
 
     <script type="text/javascript">
@@ -68,28 +63,8 @@
         location.href = "https://chaeun.ga";
     }
 
-    function Meow() {
-        Toastify({
-            text: "Meow.",
-            duration: 3000,
-            newWindow: true,
-            close: false,
-            gravity: "top",
-            position: "center",
-            stopOnFocus: true,
-            style: {
-                color: "white",
-                background: "black",
-                boxShadow: "none",
-                borderRadius: "99999px",
-                fontWeight: "600",
-            },
-            onClick: function() {}
-        }).showToast();
-    }
-
-    function GoToGithub() {
-        location.href = "https://github.com/chaeuni622";
+    function GoToDiscordBot() {
+        location.href = "https://discord.com/api/oauth2/authorize?client_id=999459519434326077&permissions=0&scope=bot";
     }
     </script>
 </body>
